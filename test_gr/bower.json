@@ -1,0 +1,21 @@
+{
+  "name": "test_gr",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Chian Yee <leechianyee@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "^1.3.3"
+  }
+}
