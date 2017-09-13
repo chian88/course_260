@@ -10,27 +10,15 @@ var CheckoutView = Backbone.View.extend({
     "click i.fa-plus": "increment"
   },
   increment: function(e) {
-    var id = $(e.currentTarget).closest("tr").attr("data-id"),
-        cartItem = this.collection.get(id),
-        quantity = cartItem.get("quantity");
+    var id = $(e.currentTarget).closest("tr").attr("data-id");
 
-    cartItem.set("quantity", quantity + 1);
-    this.collection.update();
+    this.collection.trigger("increment", id);
     this.render();
   },
   decrement: function(e) {
-    var id = $(e.currentTarget).closest("tr").attr("data-id"),
-        cartItem = this.collection.get(id),
-        quantity = cartItem.get("quantity");
+    var id = $(e.currentTarget).closest("tr").attr("data-id");
 
-    quantity -= 1;
-
-    if (quantity === 0) {
-      this.collection.remove(cartItem);
-    } else {
-      cartItem.set("quantity", quantity);         
-    }
-    this.collection.update();
+    this.collection.trigger("decrement", id);
     this.render(); 
   },
   cancelOrder: function(e) {

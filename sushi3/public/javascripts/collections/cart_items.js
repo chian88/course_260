@@ -40,6 +40,26 @@ var CartItems = Backbone.Collection.extend({
     this.reset();
     this.update();
   },
+  increment: function(id) {
+    var cartItem = this.get(id),
+        quantity = cartItem.get("quantity");
+
+        cartItem.set("quantity", quantity + 1);
+        this.update();
+  },
+  decrement: function(id) {
+    var cartItem = this.get(id),
+        quantity = cartItem.get("quantity");
+
+    quantity -= 1;
+
+    if (quantity === 0) {
+      this.remove(cartItem);
+    } else {
+      cartItem.set("quantity", quantity);         
+    }
+    this.update();
+  },
   update: function() {
     this.setTotal().setQuantity().updateStorage();
     this.trigger('cart_updated');
@@ -47,5 +67,7 @@ var CartItems = Backbone.Collection.extend({
   initialize: function() {
     this.readStorage();
     this.on("empty_cart", this.emptyCart);
+    this.on("increment", this.increment);
+    this.on("decrement", this.decrement);
   }
 })
