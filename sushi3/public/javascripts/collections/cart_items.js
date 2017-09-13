@@ -35,7 +35,6 @@ var CartItems = Backbone.Collection.extend({
       this.add(existing);
     }
     this.update();
-
   },
   emptyCart: function() {
     this.reset();

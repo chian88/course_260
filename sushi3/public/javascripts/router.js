@@ -1,8 +1,3 @@
-Handlebars.registerHelper("format_price", function(price) {
-  return (+price).toFixed(2);
-})
-
-
 var router = new (Backbone.Router.extend({
   index: function() {
     App.indexView();
@@ -19,9 +14,5 @@ var router = new (Backbone.Router.extend({
 
 Backbone.history.start({
   pushState: true
-});
-
-$(document.body).on("click", "a.empty_cart", function() {
-  App.cart.view.emptyCart();
 });
 

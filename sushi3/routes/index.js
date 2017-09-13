@@ -13,9 +13,4 @@ router.get('/', function(req, res, next) {
   res.render('index', { menus: getMenus() });
 });
 
-/* GET home page. */
-router.post('/', function(req, res, next) {
-  res.render('index', { menus: getMenus() });
-});
-
 module.exports = router;

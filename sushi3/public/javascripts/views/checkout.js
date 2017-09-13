@@ -1,4 +1,5 @@
 var CheckoutView = Backbone.View.extend({
+  template: App.templates.checkout,
   attributes: {
     id: "content"
   },
@@ -33,9 +34,10 @@ var CheckoutView = Backbone.View.extend({
     this.render(); 
   },
   cancelOrder: function(e) {
+    e.preventDefault();
     this.collection.trigger('empty_cart');
+    router.navigate("/", { trigger: true });
   },
-  template: App.templates.checkout,
   render: function() {
     this.$el.html(this.template({
       quantity: this.collection.getQuantity(),
@@ -43,7 +45,6 @@ var CheckoutView = Backbone.View.extend({
       total: this.collection.getTotal()
     }));
     App.$el.find("#content").detach();
-    // App.$el.find("main").append(this.$el);
     App.$el.find("main").html(this.$el);
   },
   initialize: function() {

@@ -1,4 +1,6 @@
 var App = {
+  templates: JST,
+  $el: $(document.body),
   indexView: function() {
     new IndexView();
     this.renderMenus();
@@ -9,7 +11,7 @@ var App = {
   renderHeader: function() {
     new HeaderView({
       collection: this.cart
-    })
+    });
   },
   itemView: function(item_id) {
     var menu = this.menus.get(item_id);
@@ -43,7 +45,14 @@ var App = {
     _.extend(this, Backbone.Events);
     this.on("add_to_cart", this.cart.addItem.bind(this.cart));
     this.on("display_item", this.itemView);
-  },
-  templates: JST,
-  $el: $(document.body)
+  }
 }
+
+$(document.body).on("click", "a.empty_cart", function(e) {
+  e.preventDefault();
+  App.cart.view.emptyCart();
+});
+
+Handlebars.registerHelper("format_price", function(price) {
+  return (+price).toFixed(2);
+})
