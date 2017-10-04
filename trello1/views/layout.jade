@@ -1,0 +1,21 @@
+include /_mixins
+
+doctype html
+html
+  head
+    title= title
+    +stylesheet_link_tag("style3") 
+    +javascript_include_tag("vendor/all")
+    +javascript_include_tag("handlebars_templates")
+    +javascript_include_tag("handlebars_utility")
+  body
+    block content
+
+    +javascript_include_tag("application")
+    +javascript_include_tag("models/list", "models/card")
+    +javascript_include_tag("collections/lists", "collections/cards")
+    +javascript_include_tag("views/board", "views/list", "views/label", "views/card")
+    script(type="text/javascript").
+      App.lists = new Lists(!{JSON.stringify(lists)});
+      App.colors = !{JSON.stringify(colors)};
+    +javascript_include_tag("router")

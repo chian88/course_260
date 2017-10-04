@@ -1,0 +1,1149 @@
+@import url("whitespace-reset.css");
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font: normal 14px Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+/********TITLE BAR**********/
+
+#title_bar {
+  text-align: center;
+  color: #ffffff;
+  padding: 5px 10px;
+  height: 40px;
+  background: #013859;
+}
+
+#title_bar nav:first-child {
+  float: left;
+}
+
+#board {
+  border: none;
+  width: 90px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.7) url("../images/trello.png") 5px 5px no-repeat;
+  background-size: 20px;
+  text-indent: 15px;
+}
+
+#search_card {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  height: 30px; 
+  background: rgba(255, 255, 255, 0.7) url("../images/magnifying-glass.png") 120px 5px no-repeat;
+  background-size: 20px;
+}
+
+#title_bar nav:last-child {
+  float: right;
+}
+
+#title_bar nav:last-child input[type="button"] {
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  padding: 5px 10px;
+  height: 30px;
+}
+
+#title_bar input {
+  margin-right: 5px;
+}
+
+#add_board {
+  background: rgba(255, 255, 255, 0.7) url("../images/add.png") 8px 8px no-repeat;
+  background-size: 15px;
+}
+
+#information {
+  background: rgba(255, 255, 255, 0.7) url("../images/information-button.png") 8px 8px no-repeat;
+  background-size: 15px;
+}
+
+#notification {
+  background: rgba(255, 255, 255, 0.7) url("../images/notifications-bell.png") 8px 8px no-repeat;
+  background-size: 15px;
+}
+
+#user {
+  background: rgba(255, 255, 255, 0.7) url("../images/user.png") 8px 8px no-repeat;
+  background-size: 15px;
+}
+
+#title_bar h1 {
+  display: inline;
+  font-size: 30px;
+}
+
+#search_result,
+#notification_result {
+  position: absolute;
+  z-index: 2;
+  left: 110px;
+  top: 40px;
+  width: 300px;
+  padding: 5px;
+  background: rgb(255, 255, 255);
+}
+
+#notification_result {
+  left: 1350px;  
+}
+
+#search_result li,
+#notification_result li {
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  text-align: left;
+  margin: 0 0 5px 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+}
+
+/*********MAIN BOARD*************/
+
+main {
+  background: #185E65;
+  padding: 5px 10px;
+  height: 100vh;
+}
+
+/*********DASH BOARD*************/
+
+#dashboard {
+  height: 40px;
+}
+
+#dashboard h2 {
+  display: inline-block;
+  padding: 2px 0;
+  font-size: 20px;
+  height: 30px;
+  color: #FFFFFF;
+}
+
+#favorite {
+  vertical-align: top;
+  width: 30px;
+  margin-left: 10px;
+  height: 30px;
+  border: none;
+  background: transparent url("../images/star.png") 8px 5px no-repeat;
+  background-size: 15px;
+}
+
+
+#private {
+  vertical-align: top;
+  color: #ffffff;
+  width: 80px;
+  height: 30px;
+  border: none;
+  background: transparent url("../images/briefcase.png") 8px 5px no-repeat;
+  background-size: 15px;
+  text-indent: 30px;
+}
+
+#show_menu {
+  float: right;
+  width: 100px;
+  height: 30px;
+  border: none;
+  background: transparent url("../images/more.png") 0 8px no-repeat; 
+  background-size: 15px;
+  text-indent: 15px;
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/********* LIST VIEW ON THE BOARD **********/
+
+
+#lists > li {
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+  margin: 0 10px 30px 0;
+  width: 270px;
+  border-radius: 4px;
+  background: #F9CC7F;
+  padding: 8px 5px 0 5px;
+}
+
+#lists h3 {
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#lists h3 + a {
+  float: right;
+  width: 20px;
+  height: 20px;
+  background: transparent url("../images/more.png") 2px 2px no-repeat;
+  background-size: 10px;
+}
+
+.cards > li {
+  position: relative;
+  background: #FFFFFF;
+  padding: 5px;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+
+.pencil {
+  display: none;
+  z-index: 3;
+  position: absolute;
+  background: transparent url("../images/pencil.png") 5px 3px no-repeat;
+  background-size: 10px;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+
+#alterTitle input {
+  padding: 10px 20px;
+  border: none;
+  margin-bottom: 5px;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold; 
+}
+
+.cards > li:hover {
+  background: rgba(229, 229, 229, 0.9)
+}
+
+.cards > li:hover .pencil{
+  display: block;
+}
+
+.cards h4 {
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+#lists .labels > li {
+  width: 40px;
+  height: 7px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.status li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  font-size: 10px;
+}
+
+.subscribed {
+  background: transparent url("../images/eye.png") 2px 2px no-repeat;
+  width: 15px;
+  height: 15px;
+  background-size: 10px;
+}
+
+.schedule {
+  background: transparent url("../images/schedule.png") 2px 2px no-repeat;
+  width: auto;
+  height: 15px;
+  background-size: 10px;
+  text-indent: 18px;
+}
+
+.schedule.done {
+  background: lightgreen url("../images/schedule.png") 2px 2px no-repeat;  
+  background-size: 10px;
+}
+
+.description {
+  background: transparent url("../images/menu.png") 2px 2px no-repeat;
+  width: 15px;
+  height: 15px;
+  background-size: 10px;
+}
+
+.comments {
+  background: transparent url("../images/dialog.png") 2px 2px no-repeat;
+  width: auto;
+  height: 15px;
+  background-size: 10px;
+  text-indent: 18px;
+}
+
+.add_card {
+  border: none;
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  width: 100%;
+  height: 30px;
+  color: #424040;
+  background: transparent;
+}
+
+.add_card:hover {
+  background: #cccccc;
+  text-decoration: underline
+}
+
+li#add_list {
+  padding: 0;
+}
+
+#add_list input {
+  background: #939292;
+  font-size: 14px;
+  padding: 0 8px;
+  text-align: left;
+  color: #cccccc;
+  border: none;
+  width: 270px;
+  height: 40px;
+}
+
+#add_list input:hover {
+  background: #545353;
+}
+
+#fill_list {
+  position: relative;
+}
+
+#fill_list input[type="text"] {
+  width: 100%;
+  font-size: inherit;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+#fill_list input[type="button"] {
+  padding: 10px 20px;
+  border: none;
+  margin-bottom: 5px;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold; 
+}
+
+#fill_list a.close {
+  left: 90px;
+  top: 60px;
+  width: 20px;
+  height: 20px;
+  background: transparent url("../images/add.png") 1px 1px no-repeat;
+  background-size: 20px;
+  transform: rotate(45deg);
+}
+
+#fill_card {
+  position: relative;
+}
+
+#fill_card textarea {
+  width: 100%;
+  resize: vertical;
+  height: 60px;
+  font-size: inherit;  
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+#fill_card input[type="button"] {
+  padding: 10px 20px;
+  border: none;
+  margin-bottom: 5px;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+
+#fill_card a.close {
+  left: 80px;
+  top: 70px;
+  width: 20px;
+  height: 20px;
+  background: transparent url("../images/add.png") 1px 1px no-repeat;
+  background-size: 20px;
+  transform: rotate(45deg);
+}
+
+
+.list_action {
+  top: 30px;
+  left: 240px;
+}
+
+.list_action h5 ~ a {
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 8px;
+}
+
+
+/********* CARD DETAIL MODAL ***********/
+
+
+#card {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -380px;
+  border-radius: 6px;
+  padding: 15px ;
+  z-index: 3;
+  width: 760px;
+  background: #F9CC7F;
+}
+
+.close {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  width: 20px;
+  height: 20px;
+  background: transparent url("../images/add.png") 1px 1px no-repeat;
+  background-size: 15px;
+  transform: rotate(45deg);
+}
+
+#cover {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+#card > section {
+  width: 72%;
+  float: left;
+}
+
+#card > nav {
+  float: right;
+  width: 28%;
+}
+
+
+#card h4 {
+  font-size: 18px;
+  text-indent: 30px;
+  background: transparent url("../images/tv.png") 0 0 no-repeat;
+  background-size: 20px;
+  margin-bottom: 10px;
+}
+
+#title_edit {
+  display: block;
+  margin: 0 0 10px 30px;
+  width: 100%;
+  font-size: 14px;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
+
+#detail small {
+  display: block;
+  font-size: 12px;
+  color: #666666;
+  margin-left: 30px;
+  margin: 0 0 15px 30px;
+}
+
+
+#detail .subscribed {
+  display: inline-block;
+  height: 12px;
+  margin-left: 10px;
+}
+
+#done_label input {
+  cursor: pointer;
+}
+
+#card dl {
+  display: block;
+
+}
+
+#card dt {
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 10px 30px; 
+}
+
+#card .labels {
+  margin: 0 0 10px 30px;
+}
+
+#card .labels li {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 4px;
+  margin-right: 5px;
+  min-width: 40px;
+  height: 30px;
+  padding: 7px;
+  color: #000000;
+  font-size: 12px;
+}
+
+#card .change_label li {
+  display: inline-block;
+}
+
+#card .add_label {
+  background: #ccc url("../images/add.png") 13px 10px no-repeat;
+  background-size: 10px;
+}
+
+#card .duedate {
+  float: left;
+  margin: 0 0 15px 30px;
+  padding: 7px 5px;
+  border-radius: 4px;
+  height: 30px;
+  background: #cccccc;
+}
+
+#card .done {
+  background: green;
+}
+
+#card .pastdue {
+  background: red;
+}
+
+
+.duedate input[type="button"] {
+  vertical-align: top;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+
+dl#description {
+  margin: 0 0 15px 0;
+  clear: both;
+}
+
+dl#description dd {
+  margin: 0 0 0 30px;
+}
+
+
+#card section > h5,
+#card nav > h5  {
+  font-size: 15px;
+  text-indent: 30px;
+}
+
+#comment_title {
+  background: transparent url("../images/dialog.png") 0 0 no-repeat;
+  height: 20px;
+  background-size: 20px;
+  margin: 0 0 15px 0;
+}
+
+#add_comment {
+  padding-left: 30px;
+  background: transparent url("../images/user.png") 0 0 no-repeat;
+  background-size: 20px;
+  margin-bottom: 5px;
+}
+
+textarea {
+  width: 90%;
+  font-size: 14px;
+  height: 100px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  resize: none;
+}
+
+#add_comment textarea {
+  margin-bottom: 10px;
+}
+
+#add_comment input[type="button"] {
+  margin: 0 0 10px 0 ;
+  background: #cccccc;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#edit_comment {
+  margin: 0 0 10px 30px;
+  position: relative;
+}
+
+#edit_comment textarea {
+  margin: 0 0 10px 0;
+}
+
+#edit_comment a.close {
+  left: 85px;
+  top: 120px;
+  width: 20px;
+  height: 20px;
+  background: transparent url("../images/add.png") 1px 1px no-repeat;
+  background-size: 20px;
+  transform: rotate(45deg);  
+}
+
+#edit_comment input {
+  padding: 10px 20px;
+  border: none;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold; 
+}
+
+#activity {
+  height: 25px;
+  margin-bottom: 5px;
+  text-indent: 30px;
+  background: transparent url("../images/list.png") 0 0 no-repeat;
+  background-size: 20px;
+}
+
+#comment li {
+  padding-top: 15px;
+}
+
+#comment li + li {
+  border-top: 1px solid #cccccc;
+}
+
+
+#comment h6 {
+  text-indent: 30px;
+  height: 25px;
+  background: transparent url("../images/user.png") 0 0 no-repeat;
+  background-size: 20px;  
+}
+
+#comment p {
+  display: inline-block;
+  border-radius: 4px;
+  margin: 0 0 10px 30px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+#comment a {
+  margin-right: 5px;
+}
+
+
+#card nav {
+  margin-top: 80px;
+}
+
+
+#card nav h5 {
+  text-indent: 0;
+  margin: 10px 0;
+}
+
+#card nav li[id] {
+  font-weight: bold;
+  cursor: pointer;
+  text-indent: 25px;
+  padding: 8px;
+  border: 1px solid #666666;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+#card #label {
+  background: #F15C25 url("../images/price-tag.png") 10px 10px no-repeat;
+  background-size: 10px;
+}
+
+#card #due {
+  background: #F15C25 url("../images/schedule.png") 10px 10px no-repeat;
+  background-size: 10px;
+}
+
+#card #move {
+  background: #F15C25 url("../images/right-arrow.png") 10px 10px no-repeat;
+  background-size: 10px;
+}
+
+#card #copy {
+  background: #F15C25 url("../images/tv.png") 10px 10px no-repeat;
+  background-size: 10px;
+}
+
+#card #subscribe {
+  background: #F15C25 url("../images/eye.png") 10px 10px no-repeat;
+  background-size: 10px;
+}
+
+#card #subscribe.true {
+  background: #13a013 url("../images/eye.png") 10px 10px no-repeat;
+  background-size: 10px;
+}
+
+#card #archive {
+  background: #F15C25 url("../images/information-button.png") 10px 10px no-repeat;
+  background-size: 10px;
+}
+
+/*********** GENERAL POPUP ****************/
+
+div.popup {
+  position: absolute;
+  width: 300px;
+  padding: 10px 5px;
+  border-radius: 4px;
+  color: #666666;
+  z-index: 3;
+  background: #ffffff;
+}
+
+.popup h5 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.popup .close {
+  top: 5px;
+  right: 5px;
+  background-size: 13px;
+}
+
+
+/********** existing LABELS **********/
+
+.existing_label input[type="text"] {
+  width: 100%;
+  height: 35px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+#detail .existing_label li {
+  display: block;
+  height: 30px;
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+#detail .existing_label input[type="checkbox"] {
+  display: none;
+  background: transparent url("../images/checked.png") 0 2px no-repeat;
+  background-size: 10px;
+  float: right;
+  width: 10px;
+  height: 12px;
+  -webkit-appearance: none;
+}
+
+.existing_label label {
+  display: inline-block;
+  height: 100%;
+  border-radius: 4px;
+  padding: 8px;
+  width: 250px;
+}
+
+#detail .existing_label input:checked {
+  display: inline-block;
+}
+
+.existing_label input[type="button"] {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  background: #ccc url("../images/pencil.png") 11px 8px no-repeat;
+  background-size: 10px;
+  width: 30px;
+  height: 30px;
+  float :right;
+}
+
+.existing_label ul {
+  margin-bottom: 10px;
+}
+
+.existing_label ul ~ a {
+  display: block;
+  font-size: 13px;
+  padding: 8px;
+
+  margin-bottom: 5px;
+  height: 30px;
+
+}
+
+.existing_label ul ~ a:hover {
+  background: #ccc;  
+}
+
+.existing_label a:last-child {
+  padding-top: 10px;
+  border-top: 1px solid #666;
+}
+
+
+/********** new LABELS **********/
+
+#detail .new_label dl {
+  display: block;
+  margin: 10px 0;
+}
+
+#detail .new_label .back {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: transparent url("../images/back.png") 3px 3px no-repeat;
+  background-size: 10px;
+
+}
+
+#detail .new_label dt {
+  display: block;
+  color: #000;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+#detail .new_label input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  height: 30px;
+}
+#detail .new_label li {
+  display: inline-block;
+  padding: 0;
+  margin-right: 5px;
+}
+
+#detail .new_label li label {
+  display: block;
+  border-radius: 4px;
+  width: 40px;
+  height: 30px;
+}
+
+#detail .new_label input[type="radio"] {
+  display: none;
+  background: transparent url("../images/checked.png") 15px 10px no-repeat;
+  background-size: 10px;
+  width: 40px;
+  height: 30px;
+  -webkit-appearance: none;
+}
+
+#detail .new_label input:checked {
+  display: inline-block;
+}
+
+#detail .new_label input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/********* CHANGE LABEL **********/
+
+#detail .change_label dl {
+  display: block;
+  margin: 10px 0;
+}
+
+#detail .change_label .back {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: transparent url("../images/back.png") 3px 3px no-repeat;
+  background-size: 10px;
+
+}
+
+#detail .change_label dt {
+  display: block;
+  color: #000;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+#detail .change_label input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  height: 30px;
+}
+#detail .change_label li {
+  padding: 0;
+  margin-right: 5px;
+}
+
+#detail .change_label li label {
+  display: block;
+  border-radius: 4px;
+  width: 40px;
+  height: 30px;
+}
+
+#detail .change_label input[type="radio"] {
+  display: none;
+  background: transparent url("../images/checked.png") 15px 10px no-repeat;
+  background-size: 10px;
+  width: 40px;
+  height: 30px;
+  -webkit-appearance: none;
+}
+
+#detail .change_label input:checked {
+  display: inline-block;
+}
+
+#detail .change_label input[type="button"],
+#detail .change_label input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+
+#detail .change_label input[type="button"].delete  {
+  background: red;
+  float: right;
+}
+
+/********* MOVE **********/
+
+#card #move h5 {
+  margin: 0;
+}
+
+.move select {
+  display: inline-block;
+  -webkit-appearance: button;
+  background: #cccccc;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+#move_list {
+  width: 60%;
+  margin-right: 5px;
+}
+
+#move_position {
+  width: 30%;
+}
+
+.move input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;  
+}
+
+
+/******** COPY **********/
+
+#card .copy h5 {
+  margin: 0;
+}
+
+
+#card .copy dt {
+  margin: 0 0 10px 0;
+}
+
+#card .copy {
+  text-indent: 0;
+}
+
+#card .copy dl{
+  display: block;
+  margin: 0 0 15px 0;
+}
+
+
+.copy textarea {
+  width: 100%;
+  background: #ccc;
+  resize: vertical;
+}
+
+.copy label {
+  color: #000;
+  font-weight: normal;
+}
+
+.copy dd {
+  margin: 0 0 5px 0;
+}
+
+.copy select {
+  display: inline-block;
+  -webkit-appearance: button;
+  background: #cccccc;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.copy input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;  
+}
+
+.copy input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+
+/****** edit description *********/
+
+#description dd {
+  position: relative;
+}
+
+#description textarea {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+#description input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;  
+}
+
+#description a.close {
+  left: 85px;
+  top: 120px;
+  width: 20px;
+  height: 20px;
+  background: transparent url("../images/add.png") 1px 1px no-repeat;
+  background-size: 20px;
+  transform: rotate(45deg);  
+}
+
+/******** due date ************/
+
+#detail .due h5 {
+  margin: 0;
+}
+
+#detail .due input[type="button"] {
+  padding: 10px 20px;
+  border: none;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;  
+}
+
+#detail .due input[type="button"].delete {
+  background: red;
+  float: right; 
+}
+
+#detail .due dl {
+  display: inline-block;
+  width: 50%;
+  margin: 10px 0;
+}
+
+#detail .due dt {
+  margin: 0;
+  font-weight: bold;
+}
+#detail .due input[type="text"] {
+  padding: 5px;
+  width: 90%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#datepicker {
+  margin-bottom: 10px;
+}
+
+.ui-datepicker {
+  width: 100%;
+}
+

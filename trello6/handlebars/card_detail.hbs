@@ -1,0 +1,69 @@
+<div id="cover"></div>
+<div id="card">
+  <a href="" class="close"></a>
+  <section>
+    <h4>{{title}}</h4>
+    <small>in list <a href="#">{{#find_list_title list_id}}{{/find_list_title}}</a> <span class="subscribed"></span></small>
+    <dl>
+      <dt>Labels</dt>
+      <dd>
+        <ul class="labels">
+          {{#each labels}}
+            <li class="card_label" data-id={{this.id}} style="background: {{#find_color this.id}}{{/find_color}}">
+              {{#find_color_title this.id}}{{/find_color_title}}
+            </li>
+          {{/each}}
+          <li class="add_label card_label"></li>
+        </ul>
+      </dd>
+    </dl>
+
+    {{#detailSchedule due}}{{/detailSchedule}}
+
+
+    <dl id="description">
+      <dt>Description <a href="#">Edit</a></dt>
+      <dd>{{description}}</dd>
+    </dl>
+
+    <h5 id="comment_title">Add Comment</h5>
+
+    <div id="add_comment">
+      <textarea placeholder="Write a comment.."></textarea>
+
+      <input type="button" value="Save">
+    </div>
+    
+
+    <h5 id="activity">Activity</h5>
+    <ul id="comment">
+      {{#each comments}}
+      <li data-id="{{this.id}}">
+        <h6>Chian Yee Lee</h6>
+        <div> 
+          <p>{{this.comment}}</p>
+          <small><a href="#" class="edit_comment">Edit</a> <a href="#" class="delete_comment">Delete</a></small>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  <nav>
+    <h5>Add</h5>
+      <ul>
+        <li id="label">Labels</li>
+        <li id="due">Due Date</li>
+      </ul>
+
+    <h5>Actions</h5>
+      <ul>
+        <li id="move">Move</li>
+        <li id="copy">Copy</li>
+        <li id="subscribe" class={{subscribe}}>Subscribe</li>
+        <li id="archive">Archive</li>
+      </ul>
+  </nav>
+</div>
+<nav>
+  
+</nav>

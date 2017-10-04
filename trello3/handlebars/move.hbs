@@ -1,0 +1,18 @@
+<a href="#" class="close"></a>
+<form action="/cards" method="put">
+  <h5>Move Card</h5>
+
+  <select id="move_list">
+    {{#each list}}
+    <option value="{{this.id}}">{{this.title}}</option>
+    {{/each}}
+  </select>
+
+  <select id="move_position">
+    {{#generate_card_position activeList}}
+    {{/generate_card_position}}
+  </select>
+
+  <input type="submit" value="Move">
+</form>
+                

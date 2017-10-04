@@ -1,0 +1,21 @@
+<div class="popup existing_label">
+  <a href="#" class="close"></a>
+  <h5>Labels</h5>
+  <input type="text" name="" placeholder="Search labels...">
+  <ul>
+    {{#each existing_color}}
+    <li data-id="{{this.id}}">
+      <label style="background: {{this.colors}};" data-color="{{this.colors}}">
+        {{this.title}}
+        <input type="checkbox" {{#checked_state ../card.labels this.id}}{{/checked_state}}>
+      </label>
+      <input class="label_change" type="button">
+    </li>
+    {{/each}}
+  </ul>
+
+  <a href="#">Create a new label</a>
+  <a href="#">Show more labels</a>
+
+  <a href="#">Enable color blind friendly mode</a>
+</div>

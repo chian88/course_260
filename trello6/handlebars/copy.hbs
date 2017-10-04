@@ -1,0 +1,48 @@
+<a href="#" class="close"></a>
+<h5>Copy Card</h5>
+
+<dl>
+  <dt>Title</dt>
+  <dd><textarea id="keep_title">{{card.title}}</textarea></dd>
+</dl>
+
+<dl>
+  <dt>Keep...</dt>
+  {{#if card.labels}}
+  <dd>
+    <label>
+      <input type="checkbox" id="keep_labels">
+      Labels {{#count card.labels}}{{/count}}
+    </label>
+  </dd>
+  {{/if}}
+
+  {{#if card.comments}}
+  <dd>
+
+    <label>
+      <input type="checkbox" id="keep_comments">
+      Comments {{#count card.comments}}{{/count}}
+    </label>
+
+  </dd>
+  {{/if}}
+</dl>
+
+<dl>
+  <dt>Copy to...</dt>
+  <dd>
+    <select id="move_list">
+      {{#generate_list_selection lists activeList}}{{/generate_list_selection}}
+    </select>
+    
+    <select id="move_position">
+      {{#generate_card_position activeCard}}
+      {{/generate_card_position}}
+    </select>                      
+  </dd>
+</dl>
+
+
+
+<input type="submit" value="Create Card">

@@ -1,0 +1,23 @@
+include /_mixins
+
+doctype html
+html
+  head
+    title Trello App
+    +stylesheet_link_tag("style") 
+    +javascript_include_tag("vendor/all")
+    +javascript_include_tag("handlebars_templates")
+    +javascript_include_tag("handlebars_utility")    
+
+  body
+    block content
+
+    +javascript_include_tag("application")
+    +javascript_include_tag("models/list", "models/card", "models/color")
+    +javascript_include_tag("collections/lists", "collections/cards", "collections/colors")
+    +javascript_include_tag("views/board", "views/header","views/card",  "views/list", "views/detail_card", "views/add_list", "views/add_card", "views/edit_label", "views/change_label", "views/new_label", "views/move")
+    script(type="text/javascript").
+      App.lists = new Lists(!{JSON.stringify(lists)});
+      App.cards = new Cards(!{JSON.stringify(cards)});
+      App.colors = new Colors(!{JSON.stringify(colors)});
+    +javascript_include_tag("router")

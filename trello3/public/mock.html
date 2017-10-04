@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Becoming a King | Trello</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+  <header id="title_bar">
+    <nav>
+      <input type="button" id="board" value="Boards">
+      <input type="text" id="search_card">
+    </nav>
+
+    <h1>Trello</h1>
+
+    <nav>
+      <input type="button" id="add_board">
+      <input type="button" id="information">
+      <input type="button" id="notification">
+      <input type="button" id="user">
+    </nav>
+  </header>
+
+  <main>
+    <aside id="dashboard">
+      <h2>Becoming a King</h2>  <!--Board Name-->
+      <input type="button" id="favorite">
+      <input type="button" id="private" value="Private">
+      <input type="button" id="show_menu" value="Show Menu">
+    </aside>
+
+    <ol id="lists">
+      <li>
+        <h3>Build a castle</h3>             <!-- List Name -->
+        <a href="#"></a>
+        <ol class="cards">
+          <li>
+            <ul class="labels">
+              <li style="background: yellow;"></li>
+              <li style="background: orange;"></li>
+            </ul>
+
+            <a href="#" class="pencil"></a>
+            
+            <h4>buy woods</h4> <!-- Card Name -->
+            <ul class="status">
+              <li class="subscribed"></li>
+              <li class="schedule done">29 Sep</li>
+              <li class="description"></li>
+              <li class="comments">2</li>
+            </ul>
+          </li>
+
+          <li>
+            <ul class="labels">
+            </ul>
+
+            <a href="#" class="pencil"></a>
+            
+            <h4>dig a moat</h4>
+            <ul class="status">
+              <li class="schedule">29 Sep</li>
+            </ul>
+          </li>
+
+          <li>
+            <ul class="labels">
+              <li style="background: green;"></li>
+            </ul>
+
+            <a href="#" class="pencil"></a>
+            
+            <h4>lay bricks</h4>
+            <ul class="status">
+              <li class="subscribed"></li>
+              <li class="schedule past">5 Sep</li>
+              <li class="description"></li>
+              <li class="comments">1</li>
+            </ul>
+          </li>
+
+          <li>
+            <ul class="labels">
+            </ul>
+
+            <a href="#" class="pencil"></a>
+            
+            <h4>employ some guard from bangladesh</h4>
+            <ul class="status">
+              <li class="subscribed"></li>
+              <li class="comments">1</li>
+            </ul>
+          </li>
+
+          <li>
+            <ul class="labels">
+            </ul>
+
+            <a href="#" class="pencil"></a>
+            
+            <h4>buy a catapult</h4>
+
+            <ul class="status">
+              <li class="schedule done">28 Sep</li>
+            </ul>
+          </li>
+        </ol>
+
+        <div id="fill_card">
+          <textarea></textarea>
+          <input type="button" value="Add">
+          <a href="#" class="close"></a>
+        </div>
+
+        <input type="button" class="add_card" value="Add a card...">
+      </li>
+
+
+
+      <li id="add_list">
+        <input type="button" value="Add a list...">
+      </li>    
+    </ol>
+
+    <article id="detail">
+      <div id="cover"></div>
+      <div  id="card">
+        <a href="" class="close"></a>
+        <section>
+          <h4>buy woods</h4>
+          <small>in list <a href="#">Build a castle</a> <span class="subscribed"></span></small>
+          <dl>
+            <dt>Labels</dt>
+            <dd>
+              <ul class="labels">
+                <li class="card_label" style="background: red">important
+<!--                   <div class="popup existing_label">
+                    <a href="#" class="close"></a>
+                    <h5>Labels</h5>
+                    <input type="text" name="" placeholder="Search labels...">
+                    <ul>
+                      <li>
+                        <label style="background: red;">
+                          important
+                          <input type="checkbox" name="1">
+                        </label>
+                        <input type="button">
+                      </li>
+
+                      <li>
+                        <label style="background: green;">
+                          unimportant
+                          <input type="checkbox" name="2">
+                        </label>
+                        <input type="button">
+                      </li>
+
+                      <li>
+                        <label style="background: purple;">
+                          <input type="checkbox" name="1">
+                        </label>
+                        <input type="button">
+                      </li>
+                    </ul>
+
+                    <a href="#">Create a new label</a>
+                    <a href="#">Show more labels</a>
+
+                    <a href="#">Enable color blind friendly mode</a>
+                  </div> -->
+
+<!--                   <div class="popup new_label">
+                    <a href="#" class="back"></a>
+                    <a href="#" class="close"></a>
+                    <h5>Create Label</h5>
+
+                    <dl>
+                      <dt><label>Name</label></dt>
+                      <dd><input type="text" name=""></dd>
+                    </dl>
+
+                    <dl>
+                      <dt>Select a color</dt>
+                      <dd>
+                        <ul>
+                          <li>
+                            <label style="background: red;">
+                              <input type="checkbox" name="1">
+                            </label>
+                          </li>
+
+                          <li>
+                            <label style="background: green;">
+                              <input type="checkbox" name="1">
+                            </label>
+                          </li>
+
+                          <li>
+                            <label style="background: purple;">
+                              <input type="checkbox" name="1">
+                            </label>
+                          </li>
+
+                        </ul>
+                      </dd>
+                    </dl>
+
+                    <input type="button" value="Create" name="">
+                  </div> -->
+
+                  <div class="popup change_label">
+                    <a href="#" class="back"></a>
+                    <a href="#" class="close"></a>
+                    <h5>Change Label</h5>
+
+                    <form action="#" method="get">
+                      <dl>
+                        <dt><label>Name</label></dt>
+                        <dd><input type="text" name="title"></dd>
+                      </dl>
+
+                      <dl>
+                        <dt>Select a color</dt>
+                        <dd>
+                          <ul>
+                            <li>
+                              <label style="background: red;">
+                                <input type="radio" name="color" value="red">
+                              </label>
+                            </li>
+
+
+                            <li>
+                              <label style="background: green;">
+                                <input type="radio" name="color" value="green">
+                              </label>
+                            </li>
+
+                            <li>
+                              <label style="background: purple;">
+                                <input type="radio" name="color" value="purple">
+                              </label>
+                            </li>
+
+                            <li>
+                              <label style="background: blue;">
+                                <input type="radio" name="color" value="blue">
+                              </label>
+                            </li>
+                          </ul>
+                        </dd>
+                      </dl>
+
+                      <input type="submit" value="Save">
+                      <input type="button" value="Delete" class="delete">
+                    </form>
+                  </div>
+                </li>
+                <li class="card_label" style="background: green">unimportant</li>
+                <li class="card_label" style="background: purple"></li>
+                <li class="add_label"></li>
+              </ul>
+            </dd>
+          </dl>
+
+          <dl>
+            <dt>Due Date</dt>
+            <dd class="duedate pastdue">
+              <input type="checkbox" id="done">
+              <input type="button" value="5 Sep at 12:00">
+            </dd>
+          </dl>
+
+          <dl id="description">
+            <dt>Description <a href="#">Edit</a></dt>
+            <dd>buy bricks at Home Depots</dd>
+          </dl>
+
+          <h5 id="add_comment">Add Comment</h5>
+
+          <div id="textarea">
+            <textarea placeholder="Write a comment.."></textarea>
+          </div>
+          <input type="button" value="Save">
+
+          <h5 id="activity">Activity</h5>
+          <ul id="comment">
+            <li>
+              <h6>Chian Yee Lee</h6>
+              <p>bricks are expensive</p>
+              <small>3 minutes ago - <a href="#">Edit</a> <a href="#">Delete</a></small>
+            </li>
+            <li>
+              <h6>Chian Yee Lee</h6>
+              <p>bricks are expensive</p>
+              <small>3 minutes ago - <a href="#">Edit</a> <a href="#">Delete</a></small>
+            </li>
+          </ul>
+        </section>
+        <nav>
+          <h5>Add</h5>
+            <ul>
+              <li id="label">Labels</li>
+              <li id="due">Due Date</li>
+            </ul>
+
+          <h5>Actions</h5>
+            <ul>
+              <li id="move">Move
+                <div class="popup move">
+                  <a href="#" class="close"></a>
+                  <h5>Move Card</h5>
+
+                  <select id="move_list">
+                    <option>Build a castle</option>
+                    <option>Build an army</option>
+                  </select>
+                  
+                  <select id="move_position">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+
+                  <input type="button" value="Move" name="">
+                </div>
+              </li>
+              <li id="copy">Copy
+                <div class="popup copy">
+                  <a href="#" class="close"></a>
+                  <h5>Copy Card</h5>
+
+                  <dl>
+                    <dt>Title</dt>
+                    <dd><textarea>lay bricks</textarea></dd>
+                  </dl>
+
+                  <dl>
+                    <dt>Keep...</dt>
+                    <dd>
+                      <label>
+                        <input type="checkbox" name="">
+                        Labels (6)
+                      </label>
+                    </dd>
+
+                    <dd>
+                      <label>
+                        <input type="checkbox" name="">
+                        Comments (4)
+                      </label>
+                    </dd>
+                  </dl>
+
+                  <dl>
+                    <dt>Copy to...</dt>
+                    <dd>
+                      <select id="move_list">
+                        <option>Build a castle</option>
+                        <option>Build an army</option>
+                      </select>
+                      
+                      <select id="move_position">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>                      
+                    </dd>
+                  </dl>
+
+
+
+                  <input type="button" value="Create Card" name="">
+                </div>
+              </li>
+              <li id="subscribe">Subscribe</li>
+              <li id="archive">Archive</li>
+            </ul>
+        </nav>
+      </div>
+      <nav>
+        
+      </nav>
+    </article>
+
+  </main>
+
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Becoming a King | Trello</title>
+  <link rel="stylesheet" href="stylesheets/style3.css">
+</head>
+<body>
+  <header class="header cf">
+    <ul class="leftnav">
+      <li>
+        <button>Boards</button>
+      </li>
+      <li>
+        <input type="text" name=""><span></span>
+      </li>
+    </ul>
+
+    <h1>Trello</h1>
+
+    <ul class="rightnav">
+      <li>
+        <button></button>  
+      </li>
+      <li>
+        <button></button>  
+      </li>
+      <li>
+        <button></button>  
+      </li>
+      <li>
+        <button></button>  
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h2>Becoming a King</h2>
+      <button></button>
+      <button>Private</button>
+      <button>Show Menu</button>
+    </section>
+
+    <section class="lists">
+      <ol>
+        <li class="list">
+          <header class="cf">
+            <h3>Build a castle</h3>
+            <span class="menu"></span>
+          </header>
+          <ol class="cards">
+            <li>
+              <ul class="labels">
+                <li style="background: yellow;"></li>
+                <li style="background: orange;"></li>
+              </ul>
+
+              <span class="pencil"></span>
+              
+              <h4>buy woods</h4>
+              <ul class="status">
+                <li class="subscribed"></li>
+                <li class="schedule done">29 Sep</li>
+                <li class="description"></li>
+                <li class="comments">2</li>
+              </ul>
+            </li>
+
+            <li>
+              <ul class="labels">
+              </ul>
+
+              <span class="pencil"></span>
+              
+              <h4>dig a moat</h4>
+              <ul class="status">
+                <li class="schedule">29 Sep</li>
+              </ul>
+            </li>
+
+            <li>
+              <ul class="labels">
+                <li style="background: green;"></li>
+              </ul>
+
+              <span class="pencil"></span>
+              
+              <h4>lay bricks</h4>
+              <ul class="status">
+                <li class="subscribed"></li>
+                <li class="schedule past">5 Sep</li>
+                <li class="description"></li>
+                <li class="comments">1</li>
+              </ul>
+            </li>
+
+            <li>
+              <ul class="labels">
+              </ul>
+
+              <span class="pencil"></span>
+              
+              <h4>employ some guard from bangladesh</h4>
+              <ul class="status">
+                <li class="subscribed"></li>
+                <li class="comments">1</li>
+              </ul>
+            </li>
+
+            <li>
+              <ul class="labels">
+              </ul>
+
+              <span class="pencil"></span>
+              
+              <h4>buy a catapult</h4>
+
+              <ul class="status">
+                <li class="schedule done">28 Sep</li>
+              </ul>
+            </li>
+          </ol>
+
+          <div class="add_card">Add a card...</div>
+        </li>
+
+        <li class="list">
+          <header class="cf">
+            <h3>Build an Army</h3>
+            <span class="menu"></span>
+          </header>
+          <ol class="cards">
+            <li>
+              <ul class="labels">
+                <li style="background: blue;"></li>
+              </ul>
+
+              <span class="pencil"></span>
+              
+              <h4>Go to village A to gather young man</h4>
+              <ul class="status">
+                <li class="description"></li>
+                <li class="comments">1</li>
+              </ul>
+            </li>
+
+            <li>
+              <ul class="labels">
+                <li style="background: green;"></li>
+                <li style="background: orange;"></li>
+                <li style="background: pink;"></li>
+                <li style="background: blue;"></li>
+                <li style="background: red;"></li>
+                <li style="background: lightgreen;"></li>
+                <li style="background: lightblue;"></li>
+                <li style="background: black;"></li>
+              </ul>
+
+              <span class="pencil"></span>
+              
+              <h4>Go to forest B to gather strong</h4>
+              <ul class="status">
+                <li class="subscribed"></li>
+                <li class="description"></li>
+              </ul>
+            </li>
+          </ol>
+
+          <div class="add_card">Add a card...</div>
+        </li>
+      </ol>
+
+      <div class="add_list">Add a list...</div>
+    </section>
+
+    <section class="modal_cover">
+    </section>
+
+    <section class="card_detail">
+      <a class="close" href="#"></a>
+      <article>
+        <section>
+          <h4>Go to Village A to gather young man.</h4>
+          <p class="info">in list <a href="#">Build an army</a></p>
+          <p class="info">Labels</p>
+          <ul class="labels">
+            <li style="background: blue">
+              <div class="label_panel popout">
+                <h4>Labels</h4>
+                <a href="#" class="close"></a>
+                <input type="text" class="search_label">
+                <ul class="label_choices">
+                  <li>
+                    <div class="color_block" style="background: green;">Important</div>
+                    <div class="edit_color"></div>
+                  </li>
+                  <li>
+                    <div class="color_block" style="background: green;"></div>
+                    <div class="edit_color"></div>
+                  </li>
+                </ul>
+
+                <a href="#" class="new_label">Create a new label</a>
+
+                <a href="#">Enable color blind friendly mode.</a>
+              </div>        
+            </li>
+
+            <li style="background: blue">
+              <div class="create_label popout">
+                <h4>Create Label</h4>
+                <a href="#" class="close"></a>
+                <form method="post" action="/colors"> 
+                  <label for="name_label">Name</label>
+                  <input type="text" id="name_label" name="name_label">
+                  <label>Select a color</label>
+                  <ul>
+                    <li style="background-color: green">
+                      <label>
+                        <input type="radio" name="colors" value="green">
+                        <span></span>
+                      </label>
+                    </li>
+                    <li style="background-color: red">
+                      <label>
+                        <input type="radio" name="colors" value="red">
+                        <span></span>
+                      </label>
+                    </li>
+                    <li style="background-color: orange">
+                      <label>
+                        <input type="radio" name="colors" value="orange">
+                        <span></span>
+                      </label>
+                    </li>
+                    <li style="background-color: blue">
+                      <label>
+                        <input type="radio" name="colors" value="blue">
+                        <span></span>
+                      </label>
+                    </li>
+                    <li style="background-color: black">
+                      <label>
+                        <input type="radio" name="colors" value="black">
+                        <span></span>
+                      </label>
+                    </li>
+                    <li style="background-color: purple">
+                      <label>
+                        <input type="radio" name="colors" value="purple">
+                        <span></span>
+                      </label>
+                    </li>
+                  </ul>
+
+                  <input type="submit" value="Create">
+
+                </form>
+              </div>        
+            </li>
+
+            <li class="add_labels">
+              <div class="label_panel popout">
+                <h4>Labels</h4>
+                <a href="#" class="close"></a>
+                <input type="text" class="search_label">
+                <ul>
+                  <li>
+                    <div class="color_block" style="background: green;">Important</div>
+                    <div class="edit_color"></div>
+                  </li>
+                  <li>
+                    <div class="color_block" style="background: green;"></div>
+                    <div class="edit_color"></div>
+                  </li>
+                </ul>
+
+                <a href="#" class="new_label">Create a new label</a>
+
+                <a href="#">Enable color blind friendly mode.</a>
+              </div>            
+            </li>
+          </ul>
+
+         
+          <p class="info">Description <a href="#">Edit</a></p>
+          <p>we need to hire at least 20,000 young men.</p>           
+        </section>
+
+        <section class="add_comment">
+          <form>
+            <h5>Add Comment</h5>
+            <textarea cols="60" rows="5"></textarea>
+            <input type="submit" name="" value="Save">
+          </form>
+        </section>
+
+        <section class="comment">
+          <h5>Activity</h5>
+          <ul>
+            <li>
+              <p><b>Chian Yee</b></p>
+              <p class="content">The young man are quite rebellious.</p>
+              <p  class="info footer">yesterday at 16:09<a href="#">Edit</a><a href="#">Delete</a></p>
+            </li>
+          </ul>
+        </section>
+
+        <p></p>
+      </article>
+
+      <nav>
+        <ul>
+          <li><h5>Add</h5></li>
+          <li class="button label">Labels</li>
+          <li class="button due">Due Date</li>
+
+          <li><h5>Actions</h5></li>
+          <li class="button move">Move</li>
+          <li class="button copy">Copy</li>
+          <li class="button subscribe">Subscribe</li>
+          <li class="button archive">Archive</li>
+        </ul>
+
+
+      </nav>
+    </section>
+
+  </main>
+</body>
+</html>

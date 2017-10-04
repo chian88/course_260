@@ -1,0 +1,58 @@
+<section class="modal_cover"></section>
+
+<section class="card_detail">
+  <a class="close" href="#"></a>
+  <article>
+    <section>
+      <h4>{{card.title}}</h4>
+      <p class="info">in list <a href="#">{{list.title}}</a></p>
+      <p class="info">Labels</p>
+      <ul class="labels">
+
+
+      </ul>
+      
+      <p class="info">Description <a href="#">Edit</a></p>
+      <p>{{card.description}}</p>           
+    </section>
+
+    <section class="add_comment">
+      <form>
+        <h5>Add Comment</h5>
+        <textarea cols="60" rows="5"></textarea>
+        <input type="submit" name="" value="Save">
+      </form>
+    </section>
+
+    <section class="comment">
+      <h5>Activity</h5>
+      <ul>
+        {{#each comments}}
+          <li>
+            <p><b>Chian Yee</b></p>
+            <p class="content">{{this}}</p>
+            <p  class="info footer">yesterday at 16:09<a href="#">Edit</a><a href="#">Delete</a></p>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <p></p>
+  </article>
+
+  <nav>
+    <ul>
+      <li><h5>Add</h5></li>
+      <li class="button label">Labels</li>
+      <li class="button due">Due Date</li>
+
+      <li><h5>Actions</h5></li>
+      <li class="button move">Move</li>
+      <li class="button copy">Copy</li>
+      <li class="button subscribe">Subscribe</li>
+      <li class="button archive">Archive</li>
+    </ul>
+
+
+  </nav>
+</section>

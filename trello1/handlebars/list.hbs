@@ -1,0 +1,26 @@
+<li class="list" data-id="{{id}}">
+  <header class="cf">
+    <h3>{{title}}</h3>
+    <span class="menu"></span>
+  </header>
+  <ol class="cards">
+    {{#each cards}}
+      <li class="card" data-id="{{id}}">
+        <ul class="labels">
+          {{#each labels}}
+          <li style="background: {{color}};"></li>
+          {{/each}}
+        </ul>
+
+        <span class="pencil"></span>
+        
+        <h4>{{title}}</h4>
+        <ul class="status">
+          {{#generateState this}}
+          {{/generateState}}
+        </ul>
+      </li>    
+    {{/each}}
+  </ol>
+  <div class="add_card">Add a card...</div>
+</li>

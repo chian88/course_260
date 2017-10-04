@@ -1,0 +1,22 @@
+<ul class="labels">
+  {{#each labels}}
+  <li style="background: {{#find_color this.id}}{{/find_color}};"></li>
+  {{/each}}
+</ul>
+
+<a href="#" class="pencil"></a>
+
+<h4>{{title}}</h4>
+<ul class="status">
+  {{#check_subscribe subscribe}}{{/check_subscribe}}
+
+  {{#scheduleStamp due}}{{/scheduleStamp}}
+
+  {{#if description.length}}
+    <li class="description"></li>
+  {{/if}}
+
+  {{#if comments.length}}
+    <li class="comments">{{comments.length}}</li>
+  {{/if}}
+</ul>

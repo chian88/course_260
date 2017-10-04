@@ -11,6 +11,8 @@ module.exports = function(router) {
     var album = req.body,
         albums = Albums.get();
 
+    console.log(album);
+
     album.id = Albums.getLastID() + 1;
     albums.push(album);
 

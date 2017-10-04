@@ -1,0 +1,114 @@
+@import url("whitespace-reset.css");
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font: normal 14px "Helvetica Neue", Arial, Helvetica ,sans-serif;
+}
+
+.cf:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+header {
+  text-align: center;
+  background: darkgreen;
+  height: 40px;
+  padding: 5px 5px;
+  color: #ffffff;
+}
+
+header li,
+header h1,
+header input {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.leftnav {
+  float: left;
+}
+
+.rightnav {
+  float: right;
+}
+
+header li,
+header ul,
+header button,
+header input {
+  height: 100%;
+}
+
+header h1 {
+  font-size: 28px;
+  padding-left: 35px;
+  background: transparent url('../images/trello.png') 5px 5px no-repeat;
+  background-size: 20px;
+}
+
+header li {
+   background: rgba(255,255,255,0.3); 
+}
+
+header button {
+  -webkit-appearance: none;
+  color: #ffffff;
+  border: none;
+}
+
+.leftnav input[type="text"] {
+   background: rgba(255,255,255,0.3);
+   border: none; 
+}
+
+.leftnav input + span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: transparent url('../images/magnifying-glass.png') 5px 5px no-repeat;
+  background-size: 20px;  
+}
+
+.leftnav li:first-child button {
+  padding-left: 30px;
+  background: transparent url('../images/trello.png') 5px 5px no-repeat;
+  background-size: 20px;
+}
+
+.rightnav li:first-child button {
+  background: transparent url('../images/add.png') 5px 5px no-repeat;
+}
+
+.rightnav li:nth-child(2) button {
+  background: transparent url('../images/information-button.png') 5px 5px no-repeat;
+}
+
+.rightnav li:nth-child(3) button {
+  background: transparent url('../images/notifications-bell.png') 5px 5px no-repeat;
+}
+
+.rightnav li:last-child button {
+  background: transparent url('../images/user.png') 5px 5px no-repeat;
+}
+
+.rightnav li:first-child button,
+.rightnav li:nth-child(2) button,
+.rightnav li:nth-child(3) button,
+.rightnav li:last-child button {
+  width: 30px;
+  background-size: 20px;
+}
+
+
+/*******************/
+
+
